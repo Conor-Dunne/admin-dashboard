@@ -1,0 +1,32 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.main-header {
+    background-color: aqua;
+    height: 100px;
+}
+
+.main-content {
+    background-color: antiquewhite;
+    height: 500px;
+}
+
+.side-bar {
+    background-color: red;
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
