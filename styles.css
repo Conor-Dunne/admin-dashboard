@@ -8,25 +8,54 @@ html {
     font-size: 10px;
 }
 
+body {
+    height: 100vh;
+}
 
 
 main {
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
+    grid-template-rows: 100px 1fr 50px;
 }
 
 .main-header {
     background-color: aqua;
-    height: 100px;
 }
 
 .main-content {
     background-color: antiquewhite;
-    height: 500px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.main-card-area {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-card {
+    background-color: azure;
+    width: 100%;
+    height: 300px;
+}
+
+.right-side-article-area {
+    background-color: blue;
 }
 
 .side-bar {
     background-color: red;
     grid-column: 1;
-    grid-row: 1 / 3;
+    grid-row: 1 / -1;
+}
+
+footer {
+    background-color: blueviolet;
+    grid-column: 2 / -1;
 }
