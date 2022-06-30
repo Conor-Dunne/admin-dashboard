@@ -37,11 +37,16 @@ main {
     "side-bar main main main ticker"
     ;
     grid-template-columns: max-content repeat(3, minmax(max-content, 1fr)) 1fr;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 header {
     grid-area: header;
+    display: grid;
+    grid-template-areas: 
+    "search-bar notification-area"
+    "profile-display buttons";
+    grid-template-columns: 2fr 500px;
 }
 
 .main-content {
@@ -110,5 +115,30 @@ li:hover {
     text-shadow: 7px 8px 12px #1b1c1b;
 
 }
+
+.search-bar {
+    grid-area: search-bar;
+}
+
+input[type=search] {
+    width: 30em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('./images/magnifying-glass-solid.svg');
+    background-size: 24px 24px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    margin: 10px 0 10px 5px;
+}
+
+input[type=search]:focus-visible {
+    outline: 2px solid grey;
+}
+
+
 
 
