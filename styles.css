@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 :root {
     --main-bg-color: #162038;
     --secondary-bg-color: #1a2a47;
@@ -71,7 +73,7 @@ header {
 }
 
 .side-bar {
-    padding: 30px 50px 0 20px;
+    padding: 30px 40px;
     text-align: center;
     font-size: 2rem;
     grid-area: side-bar;
@@ -90,17 +92,17 @@ li {
     align-items: center;
 }
 
-.fa-solid {
-    width: 25px;
-}
 
 .logo {
-    display: inline;
+    margin-top: 30px;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
 
-.logo-span {
-    display: flex;
-    gap: 30px;
+.fa-gauge-high {
+    color: var(--accent-green);
 }
+
 
 
