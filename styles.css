@@ -1,3 +1,9 @@
+:root {
+    --main-bg-color: #162038;
+    --secondary-bg-color: #1a2a47;
+    --accent-green: #26c99f;
+}
+
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -10,8 +16,16 @@ html {
 
 body {
     height: 100vh;
+    color: aliceblue;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
+header,
+.side-bar,
+.right-side-ticker-area,
+.main-cards {
+    background-color: var(--secondary-bg-color);
+}
 
 main {
     height: 100%;
@@ -26,12 +40,10 @@ main {
 
 header {
     grid-area: header;
-    background-color: aqua;
 }
 
 .main-content {
     grid-area: main;
-    background-color: antiquewhite;
     display: grid;
 }
 
@@ -40,32 +52,55 @@ header {
     gap: 20px;
     padding: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: var(--main-bg-color);
     justify-content: space-around;
     align-items: center;
     justify-items: center;
 }
 
-.main-card {
-    background-color: azure;
+.main-cards {
     width: 300px;
     height: 250px;
+    border-left: 5px solid var(--accent-green);
+    border-radius: 3px;
+    box-shadow: 7px 8px 12px #1b1c1b;
 }
 
 .right-side-ticker-area {
     grid-area: ticker;
-    background-color: blue;
 }
 
 .side-bar {
-    padding: 50px 20px;
+    padding: 30px 50px 0 20px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     grid-area: side-bar;
-    background-color: red;
 
+}
+
+ul {
+    margin-top: 50px;
 }
 
 li {
+    display: flex;
+    gap: 15px;
     list-style: none;
+    line-height: 40px;
+    align-items: center;
 }
+
+.fa-solid {
+    width: 25px;
+}
+
+.logo {
+    display: inline;
+}
+
+.logo-span {
+    display: flex;
+    gap: 30px;
+}
+
 
