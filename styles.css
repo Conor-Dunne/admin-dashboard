@@ -104,5 +104,11 @@ li {
     color: var(--accent-green);
 }
 
+li:hover {
+    color: var(--accent-green);
+    cursor: pointer;
+    text-shadow: 7px 8px 12px #1b1c1b;
+
+}
 
 
