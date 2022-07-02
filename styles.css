@@ -38,7 +38,7 @@ main {
     "side-bar header header header header"
     "side-bar main main main ticker"
     ;
-    grid-template-columns: max-content repeat(3, minmax(max-content, 1fr)) 1fr;
+    grid-template-columns: max-content repeat(4, 1fr) ;
     grid-template-rows: auto 1fr;
 }
 
@@ -125,7 +125,7 @@ li:hover {
 .search-box {
 display: flex;
 align-items: center;
-width: 100%;
+width: 500px;
 background-color: white;
 padding: 0 3px;
 border-radius: 25px;
@@ -170,6 +170,7 @@ input[type=search]:focus-visible {
     "profile-display"
      "buttons";
     grid-template-columns: 1fr;
+    justify-items: center;
     }
 
    ul {
@@ -179,5 +180,9 @@ input[type=search]:focus-visible {
 
    .list-text {
     display: none;
+   }
+
+   .search-box {
+    width: 80%;
    }
 }
