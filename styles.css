@@ -19,6 +19,7 @@ html {
 
 body {
     min-height: 100%;
+    min-width: 345px;
     color: aliceblue;
     font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
@@ -121,25 +122,34 @@ li:hover {
     grid-area: search-bar;
 }
 
+.search-box {
+display: flex;
+align-items: center;
+width: 100%;
+background-color: white;
+padding: 0 3px;
+border-radius: 25px;
+margin: 10px 0;
+padding-right: 15px;
+}
+
 input[type=search] {
-    width: 30em;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 25px;
     font-size: 16px;
-    background-color: white;
-    background-image: url('./images/magnifying-glass-solid.svg');
-    background-size: 24px 24px;
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    margin: 10px 0 10px 5px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
 }
 
 input[type=search]:focus-visible {
-    outline: 2px solid grey;
+    outline: none
 }
 
+.fa-magnifying-glass {
+    color: #747474;
+}
 
 
 @media only screen and (max-width: 800px) {
@@ -154,4 +164,12 @@ input[type=search]:focus-visible {
         grid-template-columns: 1fr 1fr;
     }
     
+    header {
+        grid-template-areas: 
+    "search-bar"
+    "notification-area"
+    "profile-display"
+     "buttons";
+    grid-template-columns: 1fr;
+    }
 }
