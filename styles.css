@@ -48,7 +48,9 @@ header {
     grid-template-areas: 
     "search-bar notification-area"
     "profile-display buttons";
-    grid-template-columns: 2fr 500px;
+    grid-template-columns: 2fr 300px;
+    column-gap: 20px;
+    align-items: center;
 }
 
 .main-content {
@@ -83,7 +85,7 @@ header {
 }
 
 .side-bar {
-    padding: 30px 40px;
+    padding: 25px 40px;
     text-align: center;
     font-size: 2rem;
     grid-area: side-bar;
@@ -135,6 +137,7 @@ li:hover {
 display: flex;
 align-items: center;
 width: 500px;
+height: 40px;
 background-color: white;
 padding: 0 3px;
 border-radius: 25px;
@@ -159,6 +162,23 @@ input[type=search]:focus-visible {
 .fa-magnifying-glass {
     color: #747474;
 }
+
+.right-side-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.profile-pic {
+    margin: 1em;
+    border-radius: 50%;
+    height: 50px;
+}
+
+
+
 
 
 @media only screen and (max-width: 800px) {
