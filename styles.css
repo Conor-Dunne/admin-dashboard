@@ -194,4 +194,16 @@ input[type=search]:focus-visible {
    .search-box {
     width: 80%;
    }
+
+   .logo-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   }
+
+   .logo {
+    margin: 0;
+   }
+
 }
