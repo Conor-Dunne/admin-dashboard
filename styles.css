@@ -14,7 +14,6 @@
 
 html {
     height: 100%;
-    min-width: 345px;
     font-size: 10px;
 }
 
@@ -26,12 +25,14 @@ body {
 
 h1 {
     font-size: 3.1rem;
+    font-weight: bold;
 }
 
 p {
     margin-top: 15px;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 hr {
@@ -41,6 +42,10 @@ hr {
 
 .main-cards h1 {
     color: #4db6e0;
+}
+
+.ticker-area h1 {
+    color: var(--accent-green)
 }
 
 header,
@@ -62,6 +67,7 @@ main {
 }
 
 header {
+    padding-top: 20px;
     grid-area: header;
     display: grid;
     grid-template-areas: 
@@ -140,6 +146,10 @@ header {
 }
 
 .side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     padding: 25px 40px;
     text-align: center;
     font-size: 2rem;
@@ -215,7 +225,7 @@ input[type=search]:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 1em;
     font-size: 1.2rem;
 }
 
@@ -252,7 +262,7 @@ input[type=search]:focus-visible {
 
    ul {
     display: flex;
-    justify-content: space-around;
+    gap: 2em;
    }
 
    .list-text {
@@ -267,7 +277,7 @@ input[type=search]:focus-visible {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1em;
    }
 
    .logo {
@@ -276,16 +286,15 @@ input[type=search]:focus-visible {
 
    .ticker-area {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: unset;
     justify-content: space-evenly;
    }
 
-}
-
-@media only screen and (max-width: 1180px) {
-
-.main-cards {
+   .main-cards {
     width: 90%;
 }
 
 }
+
+
