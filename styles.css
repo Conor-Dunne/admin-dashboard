@@ -24,9 +24,24 @@ body {
     font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
+h1 {
+    font-size: 3.1rem;
+}
+
+p {
+    margin-top: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+hr {
+    margin: 20px 0;
+    border-color: deeppink;
+}
+
 header,
 .side-bar,
-.right-side-ticker-area,
+.ticker-area,
 .main-cards {
     background-color: var(--secondary-bg-color);
 }
@@ -38,7 +53,7 @@ main {
     "side-bar header header header header"
     "side-bar main main main ticker"
     ;
-    grid-template-columns: max-content repeat(4, 1fr) ;
+    grid-template-columns: max-content repeat(3, 1fr) max-content;
     grid-template-rows: auto 1fr;
 }
 
@@ -69,19 +84,56 @@ header {
     justify-items: center;
 }
 
+.announcements-card,
+.trending-card,
 .main-cards {
-    width: 300px;
-    height: 250px;
     padding: 10px 10px;
-    font-size: 1.7rem;
     line-height: 1.3;
-    border-left: 5px solid #cf4fde;
     border-radius: 3px;
     box-shadow: 7px 8px 12px #1b1c1b;
 }
 
-.right-side-ticker-area {
+.announcements-card,
+.trending-card,
+.main-cards,
+.ticker-area,
+.announcement-box {
+    font-size: 1.7rem;
+}
+
+.main-cards {
+    width: 300px;
+    height: 250px;
+    border-left: 5px solid #cf4fde;
+}
+
+.ticker-area {
     grid-area: ticker;
+    display: flex;
+    padding: 50px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.announcements-card,
+.trending-card
+ {
+    width: 250px;
+    padding: 10px 10px;
+    margin-top: 20px;
+    font-size: 1.7rem;
+    line-height: 1.3;
+    border-left: 5px solid #fbff2c;
+    border-radius: 3px;
+    box-shadow: 7px 8px 12px #1b1c1b;
+}
+
+
+
+.trending-card img {
+    height: 40px;
+    margin: 0;
 }
 
 .side-bar {
@@ -103,13 +155,6 @@ li {
     line-height: 40px;
     align-items: center;
 }
-
-.main-cards > p {
-    margin-top: 15px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: 400;
-}
-
 
 .logo {
     margin-top: 30px;
@@ -181,7 +226,7 @@ input[type=search]:focus-visible {
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1180px) {
     main {
         display: grid;
         grid-template-areas: 
@@ -224,6 +269,12 @@ input[type=search]:focus-visible {
 
    .logo {
     margin: 0;
+   }
+
+   .ticker-area {
+    flex-direction: row;
+    align-items: unset;
+    justify-content: space-evenly;
    }
 
 }
