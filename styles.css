@@ -39,6 +39,10 @@ hr {
     border-color: deeppink;
 }
 
+.main-cards h1 {
+    color: #4db6e0;
+}
+
 header,
 .side-bar,
 .ticker-area,
@@ -80,7 +84,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     background-color: var(--main-bg-color);
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     justify-items: center;
 }
 
@@ -103,7 +107,6 @@ header {
 
 .main-cards {
     width: 300px;
-    height: 250px;
     border-left: 5px solid #cf4fde;
 }
 
@@ -276,5 +279,13 @@ input[type=search]:focus-visible {
     align-items: unset;
     justify-content: space-evenly;
    }
+
+}
+
+@media only screen and (max-width: 1180px) {
+
+.main-cards {
+    width: 90%;
+}
 
 }
