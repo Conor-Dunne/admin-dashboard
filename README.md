@@ -1,7 +1,10 @@
 # Admin dashboard
 An example admin dashboard built with css grid
 
+## PC Screen
 ![Screenshot](https://github.com/Conor-Dunne/admin-dashboard/blob/main/images/screenshot.png)
+
+## Mobile 
 ![Screenshot](https://github.com/Conor-Dunne/admin-dashboard/blob/main/images/scrennshot-mobile.png)
 
 ## [Live Demo](https://conor-dunne.github.io/admin-dashboard/)
